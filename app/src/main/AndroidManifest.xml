@@ -23,6 +23,7 @@
         </activity>
 
 <!--        TODO create a new class extending Activity and register it here in an <activity> tag -->
+        <activity android:name=".SuccessRootsctivity"/>
 
     </application>
 

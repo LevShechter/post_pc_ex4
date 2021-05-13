@@ -1,5 +1,6 @@
 package exercise.find.roots;
 
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -44,6 +45,40 @@ public class MainActivityTest extends TestCase {
     // find the edit-text and the button
     EditText inputEditText = mainActivity.findViewById(R.id.editTextInputNumber);
     Button button = mainActivity.findViewById(R.id.buttonCalculateRoots);
+    inputEditText.setText("123456789");
+    assertTrue(button.isEnabled());
+
+    // test: insert input to the edit text and verify that the button is enabled
+    // TODO: implement
+  }
+
+
+  @Test
+  public void when_activity_launches_progress_starts_hidden(){
+    // create a MainActivity and let it think it's currently displayed on the screen
+    MainActivity mainActivity = Robolectric.buildActivity(MainActivity.class).create().visible().get();
+
+    // find the progress bar
+    View progress_bar = mainActivity.findViewById(R.id.progressBar);
+    assertEquals(progress_bar.getVisibility(), View.GONE);
+
+    // test: insert input to the edit text and verify that the button is enabled
+    // TODO: implement
+  }
+
+
+  @Test
+  public void when_inserting_a_good_number_and_clicking_the_button_progress_should_be_displayed(){
+    // create a MainActivity and let it think it's currently displayed on the screen
+    MainActivity mainActivity = Robolectric.buildActivity(MainActivity.class).create().visible().get();
+
+    // find the edit-text and the button
+    EditText inputEditText = mainActivity.findViewById(R.id.editTextInputNumber);
+    View button = mainActivity.findViewById(R.id.buttonCalculateRoots);
+    View progress_bar = mainActivity.findViewById(R.id.progressBar);
+    inputEditText.setText("123456789");
+    button.performClick();
+    assertEquals(progress_bar.getVisibility(), View.VISIBLE);
 
     // test: insert input to the edit text and verify that the button is enabled
     // TODO: implement

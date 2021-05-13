@@ -57,3 +57,11 @@ In the bottom-left part of the screen there is a `TODO` tab. click it. You can s
 ---
 
 ✨ Good luck! ✨
+
+I pledge the highest level of ethical principles in support of academic excellence.
+I ensure that all of my work reflects my own abilities and not those of someone else
+
+answer to given Q:
+WorkManager can provide a signal to the OS that the process should be kept alive if possible while
+this work is executing. These Workers can run longer than 10 minutes.
+we can Declare the worker's foreground service type in the app's manifest.
